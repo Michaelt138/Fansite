@@ -3,16 +3,22 @@ body {
     text-align: center;
 }
 
-title {
+#title {
     text-align: center;
+    grid-area: title;
+    background-color: lightblue;
 }
 
 
 
 #intro {
-    font-display: block
-    grid-area intro;
+    font-display: block;
+    grid-area: intro;
     text-align: center;
+}
+
+#bump {
+    grid-area: bump;
 }
 
 #grid-container {
@@ -20,9 +26,11 @@ title {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "intro"
-    "intro"
-    "intro"
+    "Title Title Title"
+    "cast cast cast"
+    "intro bump bump"
+    "intro bump bump"
+    "intro bump bump"
     ;
 }
 
