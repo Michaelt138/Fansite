@@ -1,37 +1,19 @@
 body {
-    background-color: greenyellow;
-    text-align: center;
+    background-color: plum;
 }
 
-.p {
-    color: blue;
-}
-
-/* #title {
-    text-align: center;
-    grid-area: title;
-    background-color: lightblue;
-} */
-
-#ikyk {
-    grid-area: ikyk;
-    text-align: center;
-}
-
-#cast {
-    grid-area: cast;
-    font-size: large;
-}
-
-#Characters {
-    grid-area: char;
-    font-size: large;
+#hedd {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 #intro {
-    font-display: block;
     grid-area: intro;
     text-align: center;
+    font-size: large;
+
 }
 
 #logo {
@@ -41,33 +23,43 @@ body {
 
 #bump {
     grid-area: bump;
-    /* height: 250px;
-    width: 350px; */
+    width: 100%;
+}
+
+#since {
+    grid-area: since;
+    text-align: center;
 }
 
 #four {
     grid-area: four;
-    object-fit:scale-down 50%;
+    width: 100%;
 }
 
-#blurb {
-    grid-area: blur;
+#list {
+    grid-area: list;
     text-align: center;
-
 }
+
 
 #gridContainer {
     display: grid;
+    width: 100%;
+    gap: 25px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "cast logo char"
-    "intro intro four "
-    "intro intro four "
-    "bump ikyk ikyk"
-    "blur blur blur"
+    
+    "intro intro list "
+    "intro intro list"
+    "bump bump list"
+    "since since since"
+    "four four four"
     ;
-    border: 2px solid black;
+    
+}
+
+#son {
+    text-align: center;
 }
 
 
@@ -76,4 +68,150 @@ h1 {
     margin-bottom: 40px;
 }
 
+.castbody {
+    background-color: yellow;
+    width: 100%;
+}
 
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.castgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: greenyellow;
+}
+
+#jam {
+    grid-area: jam;
+}
+
+#dul {
+    grid-area: dul;
+}
+
+#mag {
+    grid-area: mag;
+}
+
+#tim {
+    grid-area: tim;
+}
+
+.cast-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.cast-img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;  
+    border-radius: 10px;
+}
+
+.cast-text {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+
+.charbody {
+    text-align: center;
+    background-color: skyblue;
+}
+
+#chargrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    padding: 25px;
+}
+
+#headcha {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.chaname {
+    font-size: larger;
+    color:seagreen ;
+    text-align: center;
+    font-weight: bolder;
+    text-decoration:underline;
+} 
+
+#Spencer {
+    grid-area: Spencer;
+}
+
+#Gus {
+    grid-area: Gus;
+}
+
+#Jules {
+    grid-area: Jules;
+}
+
+#Lassy {
+    grid-area: Lassy;
+}
+
+.por {
+    align-items: center;
+    width: 100%;
+
+}
+
+.bio {
+    font-size: large;
+}
+
+@media screen and (max-width: 300px) {
+    
+  #chargrid{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "Spencer Gus"
+    "Jules Lassy"
+    ;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+    
+  #gridContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "intro intro"
+    "bump bump"
+    "list list"
+    "since since"
+    "four four"
+    ;
+  }
+}
+
+@media screen and (max-width: 800px) {
+    
+  .castgrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "jam"
+    "dul"
+    "mag"
+    "tim"
+    ;
+  }
+}
